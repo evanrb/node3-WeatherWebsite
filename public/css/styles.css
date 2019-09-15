@@ -59,3 +59,8 @@ button {
     padding: 8px;
 
 }
+
+select { 
+    border: 1px solid #cccccc;
+    padding: 8px;
+}

@@ -52,14 +52,17 @@ app.get('/weather', (req, res) => {
             error: "no address provided"
         })
     }
-    geocode(req.query.address, (error, {lat, lon, name} = {}) => {
+    if(!req.query.language){
+        re1.query.language = ""
+    }
+    geocode(req.query.address, req.query.language, (error, {lat, lon, name} = {}) => {
         //return stops the function if there is an error
         if(error) {
             return res.send({
                 error: `Geo Error: ${error}`
             })
         }
-        forecast(lat, lon, (error, {summary: sum, temp, rainProb: rP}) => {
+        forecast(lat, lon, req.query.language, (error, {summary: sum, temp, rainProb: rP}) => {
             if(error) {
                 return res.send({
                     error: `Forecast Error: ${error}`
