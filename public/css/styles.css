@@ -1,0 +1,61 @@
+body {
+    color: #333333;
+    font-family: arial;
+    max-width: 650px;
+    margin: 0 auto;
+    padding: 0 16px;
+
+    /*set to flex so we can fore the header to the bottom*/
+    display: flex;
+    flex-direction: column;
+    /*vh means % viewport height*/
+    min-height: 100vh;
+}
+
+.main-display {
+    /*tells the flex box that content should take all the remaining space*/
+    flex-grow: 1;
+}
+
+footer {
+    color: #888888;
+    border-top: 1px solid #eeeeee;
+    margin-top: 16px;
+    padding: 16px 0;
+}
+
+header {
+    margin-top: 16px;
+    margin-bottom: 16px;
+}
+
+h1 {
+    font-size: 64px;
+    margin-bottom: 16px;
+}
+
+/* this will only style the a tags within the header*/
+header a {
+    color: #888888;
+    margin-right: 16px;
+    text-decoration: none;
+}
+
+/*will target anything with the class="portrait"*/
+.portrait {
+    width: 300px;
+}
+
+input {
+    border: 1px solid #cccccc;
+    padding: 8px;
+}
+
+button { 
+    cursor: pointer;
+    border: 1px solid #888888;
+    background: #888888;
+    color: white;
+    padding: 8px;
+
+}
